@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="silk">
 
 <head>
   <meta charset="UTF-8">
@@ -40,14 +40,16 @@
     <!-- Carousel -->
     <div class="carousel w-full">
       <div id="slide1" class="carousel-item relative w-full">
-        <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" />
+        <a href="{{ url_for('expoAvantGarde') }}"><img src="{{ url_for('static',filename='banner-avant-garde.png') }}"
+            class="w-full" /></a>
         <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❮</a>
           <a href="#slide2" class="btn btn-circle">❯</a>
         </div>
       </div>
       <div id="slide2" class="carousel-item relative w-full">
-        <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" class="w-full" />
+        <a href=""> <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+            class="w-full" /></a>
         <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
           <a href="#slide1" class="btn btn-circle">❮</a>
           <a href="#slide3" class="btn btn-circle">❯</a>
@@ -57,19 +59,102 @@
         <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" class="w-full" />
         <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
           <a href="#slide2" class="btn btn-circle">❮</a>
-          <a href="#slide4" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-      <div id="slide4" class="carousel-item relative w-full">
-        <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" class="w-full" />
-        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide3" class="btn btn-circle">❮</a>
           <a href="#slide1" class="btn btn-circle">❯</a>
         </div>
       </div>
     </div>
+    <div class="divider"></div>
+    <!-- Seleccion de los curadores -->
+    <div class="flex flex-row justify-around">
+      <div class="card card-sm bg-base-200 max-w-100 shadow basis-1/3">
+        <figure class="max-w-100 max-h-65">
+          <a href="{{ url_for('static',filename='') }}">
+            <img src="{{ url_for('static',filename='thumbWonders.jpg') }}" alt="thumbnail expo">
+          </a>
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Las 7 Maravillas del Mundo Moderno</h2>
+          <p>Lorem ipsum sit amet</p>
+        </div>
+      </div>
+      <div class="card card-sm bg-base-200 max-w-100 shadow basis-1/3">
+        <figure class="max-w-100 max-h-65">
+          <a href="{{ url_for('static',filename='') }}">
+            <img src="{{ url_for('static',filename='tortureThumb.jpg') }}" alt="thumbnail expo">
+          </a>
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Tortura Atravez de la Historia</h2>
+          <p>Lorem ipsum sit amet</p>
+        </div>
+      </div>
+      <div class="card card-sm bg-base-200 max-w-100 shadow basis-1/3">
+        <figure class="w-100 h-65">
+          <a href="{{ url_for('static',filename='') }}">
+            <img src="{{ url_for('static',filename='ukiyoeThumb.jpg') }}" alt="thumbnail expo">
+          </a>
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Ukiyo-e en la Era Meiji y Taisho</h2>
+          <p>lorem ipsum sit amet</p>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <!-- Artista del mes -->
+    <section>
+      <div class="flex flex-col gap-4">
+        <h1 class="text-center text-3xl">Artista del Mes</h1>
+        <div class="flex justify-around w-full flex-col md:flex-row basis-3/7">
+          <div class="card shadow-md bg-base-200">
+            <figure>
+              <img src="{{ url_for('static', filename='diegoRetrato.jpg') }}" alt="Retrato diego rivera"
+                class="max-w-100 md:max-w-150">
+            </figure>
+            <div class="card-body">
+              <h3><i>Autoretrato dedicado a Irene Rich</i></h3>
+            </div>
+          </div>
+          <div class=" basis-1/7 divider md:divider-horizontal lg:divider-horizontal"></div>
+          <div class="flex flex-col basis-3/7 gap-4">
+            <h2 class="text-xl italics">Maestro del Muralismo Mexicano</h2>
+            <p>Diego Rivera fue una figura fundamental en el Muralismo Mexicano, un movimiento artístico que surgió
+              tras
+              la Revolución de 1910 con el objetivo de educar a las masas y reconstruir la identidad nacional. Junto a
+              otros grandes como Orozco y Siqueiros, Rivera transformó los muros de edificios públicos en lienzos
+              monumentales. Su impacto reside en haber plasmado, con una estética que fusionaba influencias del
+              Renacimiento italiano y el arte prehispánico y folclórico mexicano, una narrativa visual poderosa sobre
+              la
+              historia de México, la vida de los trabajadores, las clases populares y la ideología marxista. Sus
+              murales,
+              como los del Palacio Nacional y la Secretaría de Educación Pública, democratizaron el arte al llevar
+              temas
+              sociales y políticos directamente al pueblo, estableciendo el muralismo como la forma de arte más
+              distintiva
+              y socialmente comprometida de la nación.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <!-- Footer -->
+  <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+    <aside>
+      <!-- logo -->
+      <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+        clip-rule="evenodd" class="fill-current">
+        <path
+          d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
+        </path>
+      </svg>
+      <!-- texto descriptivo -->
+      <p class="footer-title">
+        Artium Repository Community
+        <br />
+        Arte con interes social
+      </p>
+    </aside>
+  </footer>
 </body>
 
 </html>
