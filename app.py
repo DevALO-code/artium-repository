@@ -13,10 +13,31 @@ def aboutUs() -> str:
     return render_template("aboutus.html")
 
 
+@app.route("/sugerencias")
+def sugerencias() -> str:
+    render_template("sugerencias.html")
+
 # Expos
+
+
 @app.route("/exposiciones/avant-garde")
 def expoAvantGarde() -> str:
     return render_template("articles/avant-garde.html")
+
+
+@app.route("/exposiciones/automotriz")
+def expoAutomotriz() -> str:
+    return render_template("articles/automotriz.html")
+
+
+@app.route("/exposiciones/ukiyo-e")
+def expoUkiyo() -> str:
+    return render_template("articles/ukiyo-e.html")
+
+
+@app.route("/exposiciones/torture")
+def expoTorture() -> str:
+    return render_template("articles/torture.html")
 
 
 if __name__ == "__main__":

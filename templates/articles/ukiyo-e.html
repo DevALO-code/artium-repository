@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="silk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artium</title>
+  <!-- daisyui & tailwind-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Themes -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav class="navbar bg bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </div>
+        <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <li><a href="{{ url_for('index') }}">Homepage</a></li>
+          <li><a href="{{ url_for('sugerencias') }}">Sugerencias</a></li>
+          <li><a href="{{ url_for('aboutUs') }}">About us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <a href="{{ url_for('index') }}" class="btn btn-ghost text-xl">Artium</a>
+    </div>
+    <div class="navbar-end">
+    </div>
+  </nav>
+  <main class="flex flex-col gap-5">
+    <!-- Hero -->
+    <section>
+      <div class="hero min-h-screen" style="background-image: url({{ url_for('static',filename='heroUkiyo.jpg') }});">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">Ukiyo-e en la Era Meiji y Taisho</h1>
+            <p class="mb-5">
+              Explorando el arte que Japon dejo atras
+            </p>
+            <a href="#contentStart"><button class="btn">Iniciar</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <!-- Content -->
+    <section id="contentStart">
+      <div class="flex flex-col md:flex-row bg-base-200">
+        <div class="card bg-base-100 md:w-200 shadow-md">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='toshusaiSharaku.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>Retrato de Otani Oniji II por Toshusai Sharaku</p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="hero bg-base-200">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">Pero.... ¿Qué es el Ukiyo-e?</h1>
+              <p class="py-6 text-xl">
+                Antes de entender la evolución y decadencia de este tipo de arte, tenemos que definirlo. Este tipo de
+                arte estuvo presente en Japón desde la época Edo (siglo XVII) hasta la época Shōwa (siglo XX). Gracias a
+                esto, podemos apreciar la evolución histórica de Japón mediante el lente del arte. El Ukiyo-e fue un
+                tipo de arte xilográfica (impresiones talladas en madera); las imágenes deseadas se carvaban en madera y
+                posteriormente se impregnaban de tinta para presionarlas contra papel, similar a la imprenta de
+                Gutenberg.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="card bg-base-100 md:w-200 shadow-md">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='puenteOhashi.jpg') }}" alt="'Bajo la ola de Kanagawa' por Hokusai"
+              class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"El puente Ohashi en Atake bajo una lluvia repentina" por Utawa Hiroshige</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <section>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/2">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='originOfIwatoKagura.png') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"El Origen de la Danza Kagura" por Utagawa Kunisada</p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="hero bg-base-200 basis-1/2">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">Arte Popular</h1>
+              <p class="py-6 text-xl">
+                A diferencia de otros tipos de arte, hechos con un propósito litúrgico o de devoción, el Ukiyo-e era
+                arte popular para las tres clases de la sociedad feudal en Japón. Al ser reproducible, no era tan
+                costoso comprar una pieza impresa. Existían imprentas dedicadas a cada clase económica, con diversos
+                rangos de precios y diversos diseños a color o en blanco y negro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider "></div>
+    <section>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="hero bg-base-200 basis-1/2">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">¿Qué temas toca?</h1>
+              <p class="py-6 text-xl">
+                El Ukiyo-e trata sobre una gran variedad de temas, pero si observamos las obras más populares, podemos
+                notar una ligera inclinación hacia lo terrenal: grandes trípticos panorámicos, hermosos atardeceres y
+                personas llevando a cabo su día a día. El Ukiyo-e no se avergüenza de lo cotidiano, sino que encuentra
+                belleza en ello.
+
+                Aun así, el Ukiyo-e también es un tipo de arte que se prestó para el folclor religioso, con
+                representaciones de la diosa Amaterasu o de las grandes epopeyas de la cultura japonesa.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/2">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='dawnAtFutami.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"Atardecer en Futami-ga-ura" por Utagawa Kunisada</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <section>
+      <div class="flex flex-col md:flex-row bg-base-200">
+        <div class="card bg-base-100 md:w-200 shadow-md">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='meijiVictory.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"El victorioso emperador Meiji" por el New York Tribune</p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="hero bg-base-200 ">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">La evolución</h1>
+              <p class="py-6 text-xl">
+                Junto con la restauración del poder imperial en Japón (Meiji), Japón empezó a cambiar. Los pequeños
+                talleres cambiaron a fábricas, y las embarcaciones ahora se movían a vapor, no con vela. Japón se estaba
+                industrializando y militarizando a una velocidad nunca antes vista en la historia. El nuevo Japón tenía
+                ambiciones imperiales y, por ende, necesitaba abrirse a las nuevas tecnologías; con ellas, vinieron los
+                extranjeros.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="card bg-base-100 md:w-200 shadow-md">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='aspectsMoon.jpg') }}" alt="'Bajo la ola de Kanagawa' por Hokusai"
+              class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"Cien estilos de la Luna" por Yoshitoshi Tsuki</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider "></div>
+    <section>
+      <div class="flex flex-col md:flex-row gap-5">
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/3">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='dawnAtFutami.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"Atardecer en Futami-ga-ura" por Utagawa Kunisada</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/3">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='dawnAtFutami.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"Atardecer en Futami-ga-ura" por Utagawa Kunisada</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/3">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='dawnAtFutami.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"Atardecer en Futami-ga-ura" por Utagawa Kunisada</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+    <aside>
+      <!-- logo -->
+      <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+        clip-rule="evenodd" class="fill-current">
+        <path
+          d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
+        </path>
+      </svg>
+      <!-- texto descriptivo -->
+      <p class="footer-title">
+        Artium Repository Community
+        <br />
+        Arte con interes social
+      </p>
+    </aside>
+  </footer>
+</body>
+
+</html>

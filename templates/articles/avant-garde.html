@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="silk">
 
 <head>
   <meta charset="UTF-8">
@@ -23,27 +23,71 @@
           </svg>
         </div>
         <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a>Homepage</a></li>
-          <li><a>Sugerencias</a></li>
-          <li><a>About us</a></li>
+          <li><a href="{{ url_for('index') }}">Homepage</a></li>
+          <li><a href="{{ url_for('sugerencias') }}">Sugerencias</a></li>
+          <li><a href="{{ url_for('aboutUs') }}">About us</a></li>
         </ul>
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost text-xl">Artium</a>
+      <a href="{{ url_for('index') }}" class="btn btn-ghost text-xl">Artium</a>
     </div>
     <div class="navbar-end">
     </div>
   </nav>
   <!-- Expo content -->
-  <main>
+  <main class="flex flex-col gap-5">
+    <!-- Hero -->
     <section>
-      <div class="flex justify-around w-full sm:flex-col flex-row">
-        <img src="" alt="" class="max-w-200 max-h-100">
-        <div class="divider md:divider-horizontal lg:divider-horizontal"></div>
-        <div class="flex flex-col">
-          <h2></h2>
-          <p></p>
+      <div class="hero min-h-screen"
+        style="background-image: url({{ url_for('static',filename='heroAvantGarde.jpg') }});">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">Avant Garde Revolucionario</h1>
+            <p class="mb-5">
+              Explorando el mundo del arte vanguardista sovietico durante los 10s a los 30s
+            </p>
+            <a href="#contentStart"><button class="btn btn-primary">Iniciar</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content start -->
+    <section id="contentStart">
+      <div class="flex flex-col gap-5">
+        <h1 class="text-center text-3xl">Artista del Mes</h1>
+        <div class="flex justify-around w-full flex-col md:flex-row">
+          <div class="card shadow-md bg-base-200">
+            <figure>
+              <img src="{{ url_for('static', filename='diegoRetrato.jpg') }}" alt="Retrato diego rivera"
+                class="max-w-100 md:max-w-150">
+            </figure>
+            <div class="card-body">
+              <h3><i>Autoretrato dedicado a Irene Rich</i></h3>
+            </div>
+          </div>
+          <div class="divider md:divider-horizontal lg:divider-horizontal"></div>
+          <div class="flex flex-col gap-4">
+            <h2 class="text-xl italics">Maestro del Muralismo Mexicano</h2>
+            <div class="card bg-base-200">
+              <p>Diego Rivera fue una figura fundamental en el Muralismo Mexicano, un movimiento
+                artístico que surgió
+                tras
+                la Revolución de 1910 con el objetivo de educar a las masas y reconstruir la identidad nacional. Junto a
+                otros grandes como Orozco y Siqueiros, Rivera transformó los muros de edificios públicos en lienzos
+                monumentales. Su impacto reside en haber plasmado, con una estética que fusionaba influencias del
+                Renacimiento italiano y el arte prehispánico y folclórico mexicano, una narrativa visual poderosa sobre
+                la
+                historia de México, la vida de los trabajadores, las clases populares y la ideología marxista. Sus
+                murales,
+                como los del Palacio Nacional y la Secretaría de Educación Pública, democratizaron el arte al llevar
+                temas
+                sociales y políticos directamente al pueblo, estableciendo el muralismo como la forma de arte más
+                distintiva
+                y socialmente comprometida de la nación.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
