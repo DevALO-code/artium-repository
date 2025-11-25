@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="silk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artium</title>
+  <!-- daisyui & tailwind-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Themes -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav class="navbar bg bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </div>
+        <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <li><a href="{{ url_for('index') }}">Homepage</a></li>
+          <li><a href="{{ url_for('sugerencias') }}">Sugerencias</a></li>
+          <li><a href="{{ url_for('aboutUs') }}">About us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <a href="{{ url_for('index') }}" class="btn btn-ghost text-xl">Artium</a>
+    </div>
+    <div class="navbar-end">
+    </div>
+  </nav>
+  <!-- Expo content -->
+  <main class="flex flex-col gap-5">
+    <!-- Hero -->
+    <section>
+      <div class="hero min-h-screen" style="background-image: url({{ url_for('static',filename='tortureHero.jpg') }});">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">Tortura Atravez de la Historia</h1>
+            <p class="mb-5">
+              Explorando la practica mas Atroz de la Humanidad
+            </p>
+            <a href="#contentStart"><button class="btn btn-primary">Iniciar</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content start -->
+    <main class="flex flex-col gap-5">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 iems-start">
+
+            <!-- primera card    -->
+            <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                <figure>
+                    <img src="{{ url_for('static', filename='TOROBRONCE.png') }}"
+                         alt="Tortura a través de la historia"
+                         class="max-w-sm rounded-lg shadow-2xl"/>
+                </figure>
+
+                <div class="card-body">
+                    <h2 class="card-title">El Toro de Bronce</h2>
+                    <p>
+                        Estatua de bronce con forma de toro donde metían a una persona dentro y la calentaban desde abajo.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- HERO -->
+            <div class="hero bg-base-200 rounded-xl p-6 shadow mx-auto">
+                <div class="hero-content text-center">
+                    <div>
+                        <h1 class="text-5xl font-bold">El Toro de Fálaris</h1>
+                        <p class="py-6">
+                            El Toro de Fálaris, también conocido como el Toro Siciliano, es tristemente célebre como uno de
+                            los métodos de tortura y ejecución más espeluznantes de la antigüedad. Su diseño macabro y su
+                            resonancia histórica lo han convertido en un símbolo de tiranía extrema.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- segunda card -->
+            <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                <figure>
+                    <img src="{{ url_for('static', filename='TORODIBUJOANTIGUO.png') }}"
+                         alt="Ilustración del Toro de Fálaris"
+                         class="max-w-sm rounded-lg shadow-2xl"/>
+                </figure>
+
+                <div class="card-body">
+                    <h2 class="card-title">El Toro de Bronce</h2>
+                    <p>
+                        Representación del Toro de Fálaris mostrando el interior del toro metálico y la fuente de calor debajo.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- Tercera  card -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+            <figure>
+                <img src="{{ url_for('static', filename='TOROMUSEO.png') }}"
+                     alt="Tortura a través de la historia"
+                     class="max-w-sm rounded-lg shadow-2xl"/>
+            </figure>
+
+            <div class="card-body">
+                <h2 class="card-title">El toro dorado</h2>
+                <p>
+
+                </p>
+            </div>
+        </div>
+            <!-- Segundo hero-->
+        <div class="hero bg-base-200 rounded-xl p-6 shadow mx-auto">
+            <div class="hero-content text-center">
+                <div>
+                    <h1 class="text-5xl font-bold">Cómo Funcionaba el Toro de Fálaris</h1>
+                    <p class="py-6" >
+                        El metal se calentaba progresivamente hasta alcanzar temperaturas extremas, asando viva a la persona atrapada en su interior.
+                        El aspecto más infame del diseño era un sistema de tubos que salían por la boca del toro. Estos tubos estaban calibrados para transformar los desesperados gritos de la víctima en el ruido artificial de los bramidos de un toro, lo que amplificaba el horror para los espectadores.
+                    </p>
+                </div>
+            </div>
+        </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- Tercer hero-->
+            <div class="hero bg-base-200 rounded-xl p-6 shadow mx-auto">
+                <div class="hero-content text-center">
+                    <div>
+                        <h1 class="text-5xl font-bold">Origen e Historia</h1>
+                        <p class="py-6" >
+                            Aspecto	Detalle Clave
+                            Inventor (Diseñador)	Perilao de Atenas, un fundidor de bronce. Destinatario Original	Fálaris, el tirano de Akragas. Ubicación	Akragas (actual Agrigento) en Sicilia, Italia.
+                            Época	Aproximadamente el siglo VI a.C.
+
+                            Según los relatos, el instrumento fue creado por el fundidor Perilao para Fálaris, el despiadado tirano del estado siciliano de Akragas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+            <figure>
+                <img src="{{ url_for('static', filename='torohisto.png') }}"
+                     alt="Tortura a través de la historia"
+                     class="max-w-sm rounded-lg shadow-2xl"/>
+            </figure>
+
+            <div class="card-body">
+                <h2 class="card-title">Grabado Antiguo</h2>
+                <p>representa el uso del Toro de Fálaris, mostrando a varias personas introduciendo a la víctima mientras el mecanismo es preparado frente a una multitud
+                </p>
+            </div>
+        </div>
+            <!-- LEGADO CULTURAL 3 COLUMNAS  -->
+
+
+
+                <!-- primera card  LEGADO CULTURAL -->
+                <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                    <figure>
+                        <img src="{{ url_for('static', filename='LEGADOUNO.png') }}"
+                             alt=""
+                             class="max-w-sm rounded-lg shadow-2xl"/>
+                    </figure>
+
+                    <div class="card-body">
+                        <h2 class="card-title"></h2>
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- HERO LEGADO CULTURAL -->
+                <div class="hero bg-base-200 rounded-xl p-6 shadow mx-auto">
+                    <div class="hero-content text-center">
+                        <div>
+                            <h1 class="text-5xl font-bold">LEGADO CULTURAL</h1>
+                            <p class="py-6">
+                                Debido a su naturaleza única y horrorosa, el Toro de Fálaris no es solo una nota al pie en la historia de la tortura, sino que ha trascendido como un poderoso elemento cultural:
+
+                                Ha sido mencionado en numerosos textos de la antigüedad para ilustrar la crueldad y la maldad de los tiranos.
+
+                                Su método ha inspirado y aparecido en varias películas y obras literarias del género de terror a lo largo de los siglos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- segunda card LEGADO CULTURAL-->
+                <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                    <figure>
+                        <img src="{{ url_for('static', filename='LAGADODOS.png') }}"
+                             alt="Ilustración del Toro de Fálaris"
+                             class="max-w-sm rounded-lg shadow-2xl"/>
+                    </figure>
+
+                    <div class="card-body">
+                        <h2 class="card-title"></h2>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+
+
+
+        <!-- Footer -->
+    <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+      <aside>
+        <!-- logo -->
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+          clip-rule="evenodd" class="fill-current">
+          <path
+            d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
+          </path>
+        </svg>
+        <!-- texto descriptivo -->
+        <p class="footer-title">
+          Artium Repository Community
+          <br />
+          Arte con interes social
+        </p>
+      </aside>
+    </footer>
+</body>
+
+</html>
