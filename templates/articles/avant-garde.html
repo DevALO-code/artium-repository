@@ -46,53 +46,258 @@
           <div class="max-w-md">
             <h1 class="mb-5 text-5xl font-bold">Avant Garde Revolucionario</h1>
             <p class="mb-5">
-              Explorando el mundo del arte vanguardista sovietico durante los 10s a los 30s
+              Explorando el una colección curada del arte vanguardista Europeo durante los 10s a los 30s
             </p>
-            <a href="#contentStart"><button class="btn btn-primary">Iniciar</button></a>
+            <a href="#contentStart"><button class="btn ">Iniciar</button></a>
           </div>
         </div>
       </div>
     </section>
     <!-- Content start -->
+    <div class="divider"></div>
     <section id="contentStart">
-      <div class="flex flex-col gap-5">
-        <h1 class="text-center text-3xl">Artista del Mes</h1>
-        <div class="flex justify-around w-full flex-col md:flex-row">
-          <div class="card shadow-md bg-base-200">
-            <figure>
-              <img src="{{ url_for('static', filename='diegoRetrato.jpg') }}" alt="Retrato diego rivera"
-                class="max-w-100 md:max-w-150">
-            </figure>
-            <div class="card-body">
-              <h3><i>Autoretrato dedicado a Irene Rich</i></h3>
+      <div class="flex flex-col md:flex-row bg-base-200">
+        <div class="card bg-base-100 md:w-200 shadow-md">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='avant/avraamov.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>Arseny Avraamov circa 1920</p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="hero bg-base-200">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">Una ciudad, una sinfonía</h1>
+              <p class="py-6 text-xl">
+                El 7 de noviembre de 1922, quinto aniversario de la Revolución de Octubre (llamada así por el calendario
+                juliano), la ciudad de Baku, capital de la entonces República Socialista de Azerbaiyán, fue sujeta a la
+                exhibición musical más única de la historia. El director Arseny Avraamov dirigió no solo instrumentos y
+                coros, sino fábricas, buques de guerra y armamento militar para crear un sonido que envolvió a toda la
+                ciudad. El sonido de "L'Internationale" retumbó por las calles de Baku, al mismo tiempo que metralletas
+                y piezas de artillería. Después siguieron La Marsellesa y luego Warszawianka. Por unas cuantas horas,
+                todo Baku fue una sola melodía que representaba el progreso y la industria </p>
             </div>
           </div>
-          <div class="divider md:divider-horizontal lg:divider-horizontal"></div>
-          <div class="flex flex-col gap-4">
-            <h2 class="text-xl italics">Maestro del Muralismo Mexicano</h2>
-            <div class="card bg-base-200">
-              <p>Diego Rivera fue una figura fundamental en el Muralismo Mexicano, un movimiento
-                artístico que surgió
-                tras
-                la Revolución de 1910 con el objetivo de educar a las masas y reconstruir la identidad nacional. Junto a
-                otros grandes como Orozco y Siqueiros, Rivera transformó los muros de edificios públicos en lienzos
-                monumentales. Su impacto reside en haber plasmado, con una estética que fusionaba influencias del
-                Renacimiento italiano y el arte prehispánico y folclórico mexicano, una narrativa visual poderosa sobre
-                la
-                historia de México, la vida de los trabajadores, las clases populares y la ideología marxista. Sus
-                murales,
-                como los del Palacio Nacional y la Secretaría de Educación Pública, democratizaron el arte al llevar
-                temas
-                sociales y políticos directamente al pueblo, estableciendo el muralismo como la forma de arte más
-                distintiva
-                y socialmente comprometida de la nación.</p>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="card bg-base-100 md:w-200 shadow-md">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='avant/symphony.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>Arseny Avraamov conduciendo la sinfonía</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <section>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="hero bg-base-200 basis-1/2">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">Futurismo Italiano</h1>
+              <p class="py-6 text-xl">
+                La izquierda no fue el unico lado del espectro politico en experimentar con el arte. El futurismo
+                italiano fue un movimiento artístico y cultural que surgió a principios del siglo XX,
+                caracterizado por su exaltación de la modernidad, la velocidad y la violencia. El futurismo buscaba
+                romper con las tradiciones del pasado y celebrar
+                la tecnología, la industria y el dinamismo de la vida contemporánea. A través de la pintura, la
+                escultura y la literatura, los futuristas defendían una estética que reflejaba el caos y la energía de
+                la vida moderna, a menudo usando formas abstractas y colores vibrantes.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/2">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='avant/palazzio.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>Sede del partido fascista Italiano durante las elecciones generales de 1934</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider "></div>
+    <section>
+      <div class="flex flex-col md:flex-row gap-4 md:max-h-150">
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/2">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='avant/continuity.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"Formas unicas de la continuidad en el espacio" por </p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/2">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='avant/cityRises.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"La ciudad se levanta" por Umberto Boccioni</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider "></div>
+    <section>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/2">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='avant/zuev.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>Club de Obreros de Zuev circa 1929</p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="hero bg-base-200 basis-1/2">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">Constructivismo</h1>
+              <p class="py-6 text-xl">
+                El constructivismo fue un movimiento artístico y de diseño que emergió en la Union Sovietica,
+                caracterizado por su enfoque en la creación de arte utilitario y su relación con la vida social y
+                política. Promovido por artistas como Vladimir Tatlin y Alexandr Rodchenko, el constructivismo abogaba
+                por una ruptura con las tradiciones estéticas del pasado y una integración del arte en la vida
+                cotidiana. Utilizaba materiales industriales y enfoques geométricos para crear obras que reflejaban la
+                modernidad y los ideales revolucionarios. Este movimiento valoraba la funcionalidad, la experimentación
+                y la colaboración entre diferentes disciplinas, influyendo en el diseño gráfico, la arquitectura y el
+                arte contemporáneo </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="divider "></div>
+    <section>
+      <div class="flex flex-col">
+        <div class="text-center max-w">
+          <h1 class="text-2xl font-bold">Obras Constructivistas de El Lissitzky</h1>
+        </div>
+        <div class="flex flex-col md:flex-row gap-5">
+          <div class="card bg-base-100 md:w-200 shadow-md basis-1/3">
+            <figure class="px-4 pt-4">
+              <img src="{{ url_for('static',filename='avant/proun.jpg') }}" alt="" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <p>"PROUN"</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 md:w-200 shadow-md basis-1/3">
+            <figure class="px-4 pt-4">
+              <img src="{{ url_for('static',filename='avant/constructor.jpg') }}" alt="" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <p>"El Constructor" (Autoretrato)</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 md:w-200 shadow-md basis-1/3">
+            <figure class="px-4 pt-4">
+              <img src="{{ url_for('static',filename='avant/wedge.jpg') }}" alt="" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <p>"¡Vence a los blancos con la cuña roja!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider "></div>
+    <section>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="hero bg-base-200 basis-1/2">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">Rayonismo</h1>
+              <p class="py-6 text-xl">
+                El rayonismo fue un movimiento artístico vanguardista que surgió en Rusia en 1910, promovido
+                principalmente por los artistas Mikhail Larianov y Natalia Goncharova. Este estilo buscaba representar
+                la realidad a través de la captura de la luz y el color en un lenguaje abstracto, empleando explosiones
+                de formas dinámicas y líneas radiantes que evocaban la energía y el movimiento presente en el mundo.
+                Inspirado por el cubismo, el fauvismo y el arte popular ruso, el rayonismo pretendía alejarse de la
+                representación figurativa convencional, centrándose en la expresión de la emoción y la experiencia
+                visual. Aunque tuvo un impacto significativo durante su apogeo, su popularidad fue efímera y el
+                movimiento eventualmente se disolvió en la década de 1920 </p>
+            </div>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/2">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='avant/redrayonism.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>"Rayonismo Rojo y Azul" por Mikhail Larianov</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider "></div>
+    <section>
+      <div class="flex flex-col gap-4">
+        <div class="text-center max-w">
+          <h1 class="text-2xl font-bold">Obras de Mikhail Larianov</h1>
+        </div>
+        <div class="flex flex-col md:flex-row gap-5">
+          <div class="card bg-base-100 max-h-200 md:w-150 shadow-md basis-1/2">
+            <figure class="px-4 pt-4">
+              <img src="{{ url_for('static',filename='avant/bullHead.jpg') }}" alt="" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <p>"Cabeza de un toro"</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 max-h-200 md:w-150 shadow-md basis-1/2">
+            <figure class="px-4 pt-4">
+              <img src="{{ url_for('static',filename='avant/rooster.jpg') }}" alt="" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <p>"Gallo y Gallina"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider "></div>
+    <section>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="hero bg-base-200 basis-1/2">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-3xl font-bold">Conclusión</h1>
+              <p class="py-6 text-xl">
+                El arte de vanguardia en el siglo XX marcó un período de innovación, experimentación y ruptura con las
+                tradiciones establecidas. Movimientos como el futurismo, el constructivism y el
+                rayonismo desafiaron las convenciones artísticas, promoviendo nuevas formas de expresión que reflejaban
+                las cambiantes realidades sociales y políticas de su tiempo. Estos artistas buscaron integrar la vida
+                cotidiana con la estética, fomentando la idea de que el arte puede ser una herramienta para la
+                transformación social. La vanguardia no solo redefinió el papel del artista, sino que también influyó
+                profundamente en el desarrollo de corrientes artísticas futuras, dejando un legado duradero que todavía
+                resuena en el arte contemporáneo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 md:w-200 shadow-md basis-1/2">
+          <figure class="px-4 pt-4">
+            <img src="{{ url_for('static',filename='avant/geisel.jpg') }}" alt="" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <p>Biblioteca de Geisel en UCSD</p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+      </div>
+    </section>
   </main>
   <!-- Footer -->
+  <div class="divider "></div>
   <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
     <aside>
       <!-- logo -->

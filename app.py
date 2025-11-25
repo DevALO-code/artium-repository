@@ -15,7 +15,7 @@ def aboutUs() -> str:
 
 @app.route("/sugerencias")
 def sugerencias() -> str:
-    render_template("sugerencias.html")
+    return render_template("sugerencias.html")
 
 # Expos
 
